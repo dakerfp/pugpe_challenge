@@ -35,7 +35,7 @@ O objetivo deste problema eh transpor uma matriz.
 
 """
 
-
+transpose = lambda m: [list(r) for r in zip(*m)]
 
 import unittest
 
