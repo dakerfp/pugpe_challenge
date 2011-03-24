@@ -36,6 +36,10 @@ Problema:
 
 import unittest
 
+def solve(game):
+    points = lambda name: len([c for c in game.upper() if c in name])
+    return ["Empate", "Alice", "Bob"][cmp(points("ALICE"), points("BOB"))]
+
 class Desafio6(unittest.TestCase):
 	def test_alice_wins(self):
 		self.assertEqual( solve( "aalbicee" ), "Alice" )
